@@ -9,6 +9,13 @@
             border-radius: 10px;
             color: white;
             font-size: x-large;
+            width: 100px; height: 50px;
+            background-color: black;
+        }
+        .top_rad {
+            border-radius: 10px;
+            color: #70c738;
+            height: 80px; width: 500px;
         }
         .outline {
             border: 1px solid lightslategray;
@@ -17,44 +24,48 @@
         .b_dark {
             background-color: #373737;
         }
+        .b_size {
+            width: 100px; height: 50px;
+            background-color: #7B7B7B;
+        }
     </style>
 </head>
 <body>
     <h2 align="center">계산기</h2>
     <h3 align="center">파일명:calculator.html</h3>
-   <table class="outline" cellspacing="7" bgcolor="#DDDDDD" align="center" width="460" height="410">
+   <table class="outline" bgcolor="#DDDDDD" align="center" style="margin-block: 50px;">
    <colgroup>
-    <col style="width: 25%;" class="b_dark"/>
-    <col style="width: 25%;" class="b_dark" />
-    <col style="width: 25%;" class="b_dark" />
-    <col style="width: 25%; background-color: orange;" />
+    <col class="b_dark;"/>
+    <col class="b_dark;" />
+    <col class="b_dark;" />
+    <col style="background-color: orange;" class="b_size" />
 </colgroup>
         <tr bgcolor="#70c738" align="right">
-            <th style="color: #373737; font-size: xxx-large; padding-right: 20px;"  class="radius" colspan="4">123+654</td>
+            <th style="color: #373737; font-size: xxx-large; padding-right: 20px;"  class="top_rad" colspan="4">123+654</td>
         </tr>
-        <tr height="53" bgcolor="#7B7B7B">
+        <tr>
             <th class="radius" colspan="2">BcakSpace</th>
             <th class="radius" colspan="2">C</th>
         </tr>
-        <tr height="53">
+        <tr>
             <th class="radius">1</th>
             <th class="radius">2</th>
             <th class="radius">3</th>
             <th class="radius">/</th>
         </tr>
-        <tr height="53">
+        <tr>
             <th class="radius">4</th>
             <th class="radius">5</th>
             <th class="radius">6</th>
             <th class="radius">x</th>
         </tr>
-        <tr height="53">
+        <tr>
             <th class="radius">7</th>
             <th class="radius">8</th>
             <th class="radius">9</th>
             <th class="radius">+</th>
         </tr>
-        <tr height="53">
+        <tr>
             <th class="radius">=</th>
             <th class="radius">0</tth>
             <th class="radius">.</th>

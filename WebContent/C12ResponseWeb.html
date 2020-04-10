@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* 전체선택자를 통해 문서의 기본스타일 지정 */
+        *{margin: 0; padding: 0; font-family: vernada;}
+
+        /* Block엘리먼트 자체에 대한 가운데 정렬을 위해 margin이 사용된다. */
+        #AllWrap {
+            margin: 0 auto; text-align: center;
+        }
+        #PartWrap {
+            width: 100%; text-align: left;
+            border: 1px solid blue;
+        }
+        #header {
+            border: 1px solid blue; text-align: center;
+            height: 100%; line-height: 100px;
+        }
+
+        /* 
+        <li>태그의 기본 블릿을 제거한다.
+        overflow의 속성값
+            visibla : 컨텐츠가 박스를 넘어가도 보임
+            hidden : 박스를 벗어난 부분은 숨겨짐
+            scroll : 컨텐츠와는 상관없이 무조건 스크롤바 생김
+            auto : 컨텐츠의 상황에 따라 스크롤바 토글됨
+        */
+        #nav ul {
+            list-style: none; 
+            overflow: auto;
+        }
+        #nav ul li {
+            font-size: 1.5em; font-weight: bold; height: 50px;
+            width: 20%; float: left; border: 1px solid blue;
+            text-align: center; line-height: 50px;
+            /* 전체넓이에 패딩과 보더에 포함하여 지정함 */
+            box-sizing: border-box;
+        }
+        #ContentWrap #content > h2 {
+            border-bottom: 1px #808080 solid;
+            font-size: 2em;
+        }
+        #content {
+            padding: 20px;
+        }
+        #footer {
+            font-size: 2em; font-weight: bold; height: 100px;
+            line-height: 100px; text-align: center;
+            border: 1px solid blue;
+        }
+        /* 스크린의 크기가 640px이상일 때(혹은 디바이스)에서의 보임설정 */
+        @media screen and (max-width: 640px) {
+            #AllWrap {width: 100%;}
+            #content p {
+                font-size: 2em; color: black;
+            }
+        }
+        @media screen and (min-width:1000px) {
+            #AllWrap {width: 80%;}
+            #content p {
+                font-size: 1em; color: green;
+            }
+        }
+        @media screen and  (min-width:641px) and (max-width:999px) {
+            #AllWrap {width: 100%;}
+            #content p {
+                font-size: 1.5em; color: red;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="AllWrap">
+        <div id="PartWrap">
+            <div id="header">
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>메뉴1입니다</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ContentWrap">
+            <div id="content">
+                <h2>오늘의 날씨</h2>
+                <p>
+                    &nbsp;금요일인 10일 현재 중부지방은 대체로 맑으나 전라도와 경상도 등 남부지방은 구름이 많고 
+                <br><br>
+                경남 창원을 비롯해 일부 해안을 중심으로 빗방울이 떨어지는 곳이 있다.
+                <br><br>
+                아침 최저기온은 전날(-3∼8도)보다 다소 높은 2∼9도로 평년 수준이겠다. 
+                <br><br>
+                낮 최고기온은 11∼18도의 분포로 전날과 비슷할 것으로 보인다.
+                <br><br>
+                오늘 오전 8시 현재 서울 기온은 6도다. 
+                <br><br>
+                이 밖의 지역 기온은 백령도 6도, 인천 6도, 춘천 3도, 강릉 4도, 울릉도·독도 6도, 홍성 2도, 
+                <br><br>
+                수원 4도, 청주 6도, 안동 6도, 전주 7도, 대전 5도, 대구 8도, 포항 9도, 목포 7도, 광주 7도, 
+                <br><br>
+                여수 10도, 창원 7도, 부산 8도, 울산 8도, 제주 10도 등이다.
+                <br><br>
+                오늘 오후 3시 예상되는 서울 기온은 15도다. 
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>FOOTER</h1>
+        </div>
+    </div>
+</body>
+</html>

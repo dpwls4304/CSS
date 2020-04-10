@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        @import
+        -<link>태그를 대체할 수 있다.
+        -style태그 안에서 사용해야되고 반드시 최상단에 선언해야한다.
+        -CSS파일에 오류가 있는경우 다운로드 하지 않는다.
+        */
+        @import url('./style/import.css');
+        .content {
+            background-color: black; color: red;
+        }
+
+        /* 
+        @media
+        -해당 웹페이지를 디바이스의 종류에 따라 각각 다르게 화면을
+        구성할 수 있게 해주는 기능을 가지고 있다.
+        -스크린용과 프린트용을 구분해야 할 때 사용한다.
+        */
+        @media screen {
+            .content {
+                background-color: black; color: white;
+            }
+        }
+        @media print {
+            .content {
+                background-color: red; color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>media속성</h2>
+    <div class="content">
+        <p>
+            <h3>오늘의 날씨</h3>
+            &nbsp;금요일인 10일 현재 중부지방은 대체로 맑으나 전라도와 경상도 등 남부지방은 구름이 많고 
+            <br><br>
+            경남 창원을 비롯해 일부 해안을 중심으로 빗방울이 떨어지는 곳이 있다.
+            <br><br>
+            아침 최저기온은 전날(-3∼8도)보다 다소 높은 2∼9도로 평년 수준이겠다. 
+            <br><br>
+            낮 최고기온은 11∼18도의 분포로 전날과 비슷할 것으로 보인다.
+            <br><br>
+            오늘 오전 8시 현재 서울 기온은 6도다. 
+            <br><br>
+            이 밖의 지역 기온은 백령도 6도, 인천 6도, 춘천 3도, 강릉 4도, 울릉도·독도 6도, 홍성 2도, 
+            <br><br>
+            수원 4도, 청주 6도, 안동 6도, 전주 7도, 대전 5도, 대구 8도, 포항 9도, 목포 7도, 광주 7도, 
+            <br><br>
+            여수 10도, 창원 7도, 부산 8도, 울산 8도, 제주 10도 등이다.
+            <br><br>
+            오늘 오후 3시 예상되는 서울 기온은 15도다. 
+        </p>
+    </div>
+</body>
+</html>
