@@ -4,63 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input {
+            font-size: 12px;
+        }
+        input[type="text"] {
+            height: 25px;
+            color: black;
+            text-indent: 8px;
+        }
+        input[type="submit"] {
+            background-color: #00bab8;
+            color: white;
+            height: 35px;
+        }
+        input[type="date"] {
+            height: 25px;
+        }
+        input[type="tel"] {
+            height: 25px;
+            width: 75px;
+        }
+        span {
+            font-size: 10px; 
+            color: gray;
+        }
+        select {
+            height: 30px;
+        }
+        .space {
+            width: 210px;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
+    <table border="0" style="width: 1250px; height: 360px; font-size: 13px;">
         <tr>
-            <td>회원정보(필수)</td>
-            <td></td>
-            <td></td>
+            <td colspan="2"><h2>회원정보(필수)</h2></td>
+        </tr>
+        <tr>
+            <td>아이디</td>
+            <td>
+                <form action="">
+                    <input type="text" value="4자리 이상">
+                    <input type="submit" value="아이디중복확인">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호확인</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                <input type="radio" checked="checked">남성
+                <input type="radio">여성
+            </td>
+        </tr>
+        <tr>
+            <td>생년월일</td>
+            <td>
+                <input type="date">
+                <input type="radio" checked="checked">양력
+                <input type="radio">음력
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">이메일</td>
+            <td>
+                <input type="text">&nbsp;@&nbsp;
+                <input type="text">
+                <select name="email">
+                    <option value="Nav">naver.com</option>
+                    <option value="Nat">nate.com</option>
+                    <option value="dau">daum.net</option>
+                    <option value="goo">google.co.kr</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>
+                    이메일 수신동의시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다.
+                    <br>
+                    수신동의 거부 시에도 기본서비스(주문배송 메일)는 발송됩니다.
+                </span>
+                <input type="radio" checked="checked">예
+                <input type="radio">아니오
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">휴대전화</td>
+            <td>
+                <input type="tel" maxlength="3">&nbsp;-&nbsp;
+                <input type="tel" maxlength="4">&nbsp;-&nbsp;
+                <input type="tel" maxlength="4">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>
+                    할인혜택과 이벤트 등의 소식 안내를 SMS로 받으실 수 있습니다.
+                    <br>
+                    수신동의 거부 시에도 기본서비스는 발송됩니다.
+                </span>
+                <input type="radio" checked="checked">예
+                <input type="radio">아니오
+            </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td></td>
+        </tr>
+    </table>
+    <table border="0" style="width: 1250px; font-size: 13px; background-color: lightgrey;">
+        <tr>
+            <td colspan="2"><h2>부가정보(선택)</h2></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>일반전화</td>
+            <td>
+                <input type="tel" maxlength="3">&nbsp;-&nbsp;
+                <input type="tel" maxlength="4">&nbsp;-&nbsp;
+                <input type="tel" maxlength="4">
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td rowspan="2">주소</td>
+            <td>
+                <form action="">
+                    <input type="text">
+                    <input type="submit" value="우편번호검색">
+                </form>
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <input type="text">
+                <input type="text" value="상세주소">
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>직업</td>
+            <td>
+                <select name="job">
+                    <option value="Default">::선택::</option>
+                    <option value="S">학생</option>
+                    <option value="P">공무원</option>
+                    <option value="C">직장인</option>
+                    <option value="S">무직</option>
+                </select>
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <div style="width: 120px;">
+                    관심브랜드
+                </div>
+            </td>
+            <td>
+                <table border="0">
+                    <tr>
+                        <td class="space"><input type="checkbox">한빛미디어</td>
+                        <td class="space"><input type="checkbox">한빛아카데미</td>
+                        <td class="space"><input type="checkbox">한빛비즈</td>
+                    </tr>
+                    <tr>
+                        <td class="space"><input type="checkbox">한빛라이프</td>
+                        <td class="space"><input type="checkbox">리얼타임 eBook</td>
+                        <td class="space"><input type="checkbox">MAKE</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="checkbox">한빛에듀</td>
+                    </tr>
+                </table>
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="3"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>관심분야</td>
+            <td>
+                <table border="0">
+                    <tr>
+                        <td class="space"><input type="checkbox">프로그래밍 언어</td>
+                        <td class="space"><input type="checkbox">웹</td>
+                        <td class="space"><input type="checkbox">모바일/게임</td>
+                    </tr>
+                    <tr>
+                        <td class="space"><input type="checkbox">데이터베이스</td>
+                        <td class="space"><input type="checkbox">네트워크/보안</td>
+                        <td class="space"><input type="checkbox">IT자격증/수험서</td>
+                    </tr>
+                    <tr>
+                        <td class="space"><input type="checkbox">OA/오피스</td>
+                        <td class="space"><input type="checkbox">디자인</td>
+                        <td class="space"><input type="checkbox">사진/예술</td>
+                    </tr>
+                    <tr>
+                        <td class="space"><input type="checkbox">경제/경영</td>
+                        <td class="space"><input type="checkbox">자기계발</td>
+                        <td class="space"><input type="checkbox">인문/사회/과학</td>
+                    </tr>
+                    <tr>
+                        <td class="space"><input type="checkbox">여행/취미</td>
+                        <td colspan="2"><input type="checkbox">가정/건강/유아</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="checkbox">기타&nbsp;:&nbsp;
+                            <input type="text2">
+                        </td>
+                    </tr>
+                </table>
+            </td>
         </tr>
+    </table>
+    <table align="center">
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <form action="">
+                    <input type="submit" value="회원가입하기">
+                </form>
+            </td>
         </tr>
     </table>
 </body>
