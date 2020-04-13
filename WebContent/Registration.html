@@ -17,6 +17,7 @@
             background-color: #00bab8;
             color: white;
             height: 35px;
+            border-radius: 0px 20px 20px 0px;
         }
         input[type="date"] {
             height: 25px;
@@ -43,14 +44,17 @@
             <col style="width: 240px;">
         </colgroup>
         <tr>
-            <td colspan="2"><h2>회원정보(필수)</h2></td>
+            <td colspan="2"><h2>회원정보<span2 style="color: red;">(필수)</span></h2></td>
         </tr>
         <tr>
             <td>아이디</td>
             <td>
                 <form action="">
                     <input type="text" value="4자리 이상">
-                    <input type="submit" value="아이디중복확인">
+                    <input type="submit" value="아이디중복확인" style="border: none;">
+                    <span3 style="font-size: 10px; color: red;">
+                        아이디 형식에 맞춰주세요(영문,숫자 조합 4문자 이상)
+                    </span>
                 </form>
             </td>
         </tr>
@@ -58,6 +62,9 @@
             <td>비밀번호</td>
             <td>
                 <input type="text">
+                <span>
+                    8~20자리의 영문, 숫자 조합(영문, 숫자, 특수기호 조합을 권장합니다)
+                </span>
             </td>
         </tr>
         <tr>
@@ -75,16 +82,16 @@
         <tr>
             <td>성별</td>
             <td>
-                <input type="radio" checked="checked">남성
-                <input type="radio">여성
+                <input type="radio" checked="checked" name="gender">남성
+                <input type="radio" name="gender">여성
             </td>
         </tr>
         <tr>
             <td>생년월일</td>
             <td>
                 <input type="date">
-                <input type="radio" checked="checked">양력
-                <input type="radio">음력
+                <input type="radio" checked="checked" name="date">양력
+                <input type="radio" name="date">음력
             </td>
         </tr>
         <tr>
@@ -140,7 +147,7 @@
             <col style="width: 210px;">
         </colgroup>
         <tr>
-            <td colspan="2"><h2>부가정보(선택)</h2></td>
+            <td colspan="2"><h2>부가정보<span2 style="color: red;">(선택)</span></h2></td>
         </tr>
         <tr>
             <td>일반전화</td>
@@ -155,7 +162,7 @@
             <td>
                 <form action="">
                     <input type="text">
-                    <input type="submit" value="우편번호검색">
+                    <input type="submit" value="우편번호검색" style="border: none;">
                 </form>
             </td>
         </tr>
@@ -186,17 +193,17 @@
             <td>
                 <table border="0">
                     <tr>
-                        <td class="space"><input type="checkbox">한빛미디어</td>
-                        <td class="space"><input type="checkbox">한빛아카데미</td>
-                        <td><input type="checkbox">한빛비즈</td>
+                        <td class="space"><input type="checkbox" name="brand">한빛미디어</td>
+                        <td class="space"><input type="checkbox" name="brand">한빛아카데미</td>
+                        <td><input type="checkbox" name="brand">한빛비즈</td>
                     </tr>
                     <tr>
-                        <td class="space"><input type="checkbox">한빛라이프</td>
-                        <td class="space"><input type="checkbox">리얼타임 eBook</td>
-                        <td><input type="checkbox">MAKE</td>
+                        <td class="space"><input type="checkbox" name="brand">한빛라이프</td>
+                        <td class="space"><input type="checkbox" name="brand">리얼타임 eBook</td>
+                        <td><input type="checkbox" name="brand">MAKE</td>
                     </tr>
                     <tr>
-                        <td colspan="3"><input type="checkbox">한빛에듀</td>
+                        <td colspan="3"><input type="checkbox" name="brand">한빛에듀</td>
                     </tr>
                 </table>
             </td>
@@ -209,33 +216,33 @@
             <td>
                 <table border="0">
                     <tr>
-                        <td class="space"><input type="checkbox">프로그래밍 언어</td>
-                        <td class="space"><input type="checkbox">웹</td>
-                        <td><input type="checkbox">모바일/게임</td>
+                        <td class="space"><input type="checkbox" name="field">프로그래밍 언어</td>
+                        <td class="space"><input type="checkbox" name="field">웹</td>
+                        <td><input type="checkbox" name="field">모바일/게임</td>
                     </tr>
                     <tr>
-                        <td class="space"><input type="checkbox">데이터베이스</td>
-                        <td class="space"><input type="checkbox">네트워크/보안</td>
-                        <td><input type="checkbox">IT자격증/수험서</td>
+                        <td class="space"><input type="checkbox" name="field">데이터베이스</td>
+                        <td class="space"><input type="checkbox" name="field">네트워크/보안</td>
+                        <td><input type="checkbox" name="field">IT자격증/수험서</td>
                     </tr>
                     <tr>
-                        <td class="space"><input type="checkbox">OA/오피스</td>
-                        <td class="space"><input type="checkbox">디자인</td>
-                        <td><input type="checkbox">사진/예술</td>
+                        <td class="space"><input type="checkbox" name="field">OA/오피스</td>
+                        <td class="space"><input type="checkbox" name="field">디자인</td>
+                        <td><input type="checkbox" name="field">사진/예술</td>
                     </tr>
                     <tr>
-                        <td class="space"><input type="checkbox">경제/경영</td>
-                        <td class="space"><input type="checkbox">자기계발</td>
-                        <td><input type="checkbox">인문/사회/과학</td>
+                        <td class="space"><input type="checkbox" name="field">경제/경영</td>
+                        <td class="space"><input type="checkbox" name="field">자기계발</td>
+                        <td><input type="checkbox" name="field">인문/사회/과학</td>
                     </tr>
                     <tr>
-                        <td class="space"><input type="checkbox">여행/취미</td>
-                        <td colspan="2"><input type="checkbox">가정/건강/유아</td>
+                        <td class="space"><input type="checkbox" name="field">여행/취미</td>
+                        <td colspan="2"><input type="checkbox" name="field">가정/건강/유아</td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <input type="checkbox">기타&nbsp;:&nbsp;
-                            <input type="text2">
+                            <input type="checkbox" name="field">기타&nbsp;:&nbsp;
+                            <input type="text2" name="field">
                         </td>
                     </tr>
                 </table>
@@ -246,7 +253,7 @@
         <tr>
             <td>
                 <form action="">
-                    <input type="submit" value="회원가입하기">
+                    <input type="submit" value="회원가입하기" style="border: none;">
                 </form>
             </td>
         </tr>
